@@ -1,0 +1,12 @@
+
+  
+{"calculate": "Height", "as": "Height"}
+
+  
+    
+
+    
+
+{"field": "Height", "type": "quantitative"},
+{"field": "Height", "type": "quantitative", "format": ".2f"}
+  
