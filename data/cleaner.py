@@ -67,11 +67,15 @@ for key in bronze_count:
         else:
             medal_count[key] = [0, 0, bronze_count[key]]
 
+
+
 for key in zero_count:
         if key in medal_count:
             medal_count[key].append(zero_count[key])
         else:
             medal_count[key] = [0, 0, 0, 0]
+
+print(medal_count)
 
 
 #print(gold_count)
