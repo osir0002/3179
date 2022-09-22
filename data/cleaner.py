@@ -4,6 +4,10 @@ import re
 import operator
 from itertools import islice
 import csv
+
+import geopandas as gpd
+import json
+
 import os
 
 cwd = os.getcwd()  # Get the current working directory (cwd)
@@ -50,32 +54,30 @@ for index, row in df.iterrows():
 medal_count = dict()
 
 for key in gold_count:
-    medal_count[key] = [gold_count[key]]
+    medal_count[key] = [gold_count[key], 0, 0, 0]
 
 
 for key in silver_count:
         if key in medal_count:
-            medal_count[key].append(silver_count[key])
+            medal_count[key][1] = silver_count[key]
         else:
-            medal_count[key] = [0, silver_count[key]]
+            medal_count[key] = [0, silver_count[key], 0, 0]
 
-print(medal_count)
 
 for key in bronze_count:
         if key in medal_count:
-            medal_count[key].append(bronze_count[key])
+            medal_count[key][2] = bronze_count[key]
         else:
-            medal_count[key] = [0, 0, bronze_count[key]]
+            medal_count[key] = [0, 0, bronze_count[key], 0]
 
 
 
 for key in zero_count:
         if key in medal_count:
-            medal_count[key].append(zero_count[key])
+            medal_count[key][3] = zero_count[key]
         else:
             medal_count[key] = [0, 0, 0, 0]
 
-print(medal_count)
 
 
 #print(gold_count)
@@ -94,10 +96,11 @@ for key in medal_count:
     })
 
 
-print(big_dict)
 
 fields = ['Country', 'Gold_Count', 'Silver_Count', 'Bronze_Count', 'Zero_Count']
-#with open('country_medal_count.csv', 'w') as csvfile:
-#    writer = csv.DictWriter(csvfile, fieldnames=fields)
-#    writer.writeheader()
-#    writer.writerows(big_dict)
+with open('data/country_medal_count.csv', 'w', encoding="utf-8") as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames=fields)
+    writer.writeheader()
+    writer.writerows(big_dict)
+    
+print('Done')
