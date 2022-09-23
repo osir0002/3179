@@ -14,10 +14,10 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/athlete_events.csv"
+          "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/country_medal_count.csv"
         },
-        "key": "Team", 
-        "fields": ["Age"]
+        "key": "Country", 
+        "fields": ["Gold_Count"]
       }
     } 
     ],
@@ -26,9 +26,12 @@
 
     "encoding": {
       "color": {
-        "field": "Age",
+        "field": "Gold_Count",
         "type": "quantitative",
-        "scale": {"type": "linear"}
+        "scale": {"type": "threshold",
+        "domain": [10, 20, 50, 100, 200, 500, 1000, 2000, 3000],
+        "range": ["#f9f7e9", "#f2eed3", "#ece6be", "#e5dda8", "#dfd592", "#d8cd7c", "#d2c466", "#cbbc51", "#c5b33b", "#beab25"]
+        }
        }, 
       
        "tooltip": [
