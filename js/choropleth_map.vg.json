@@ -23,7 +23,7 @@
           "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/global%20firepower%202022%20wide.csv"
         },
         "key": "country", 
-        "fields": ["Active Personnel"]
+        "fields": ["Armored Vehicles"]
       }
     }],
 
@@ -31,15 +31,15 @@
 
     "encoding": {
       "color": {
-        "field": "Active Personnel",
+        "field": "Armored Vehicles",
         "type": "quantitative",
         "scale": {"type": "linear"
         }
        }, 
       
        "tooltip": [
-        {"field": "properties.NAME_LONG", "type": "nominal", "title": "Country"},
-        {"field": "Active Personnel", "type": "quantitative"}
+        {"field": "properties.GEOUNIT", "type": "nominal", "title": "Country"},
+        {"field": "Armored Vehicles", "type": "quantitative"}
       ]}}]
 
 
