@@ -17,7 +17,7 @@
     
     "transform": [
     {
-      "lookup": "properties.NAME_LONG",
+      "lookup": "properties.NAME_EN",
       "from": {
         "data": {
           "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/global%20firepower%202022%20wide.csv"
