@@ -8,28 +8,31 @@
     "data": {
       "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/global%20firepower%202022%20wide.csv"
     },
+    
 
-    "width": {"step": 17},
 
-    "mark": {"type": "bar"},
+
+
+
+    "mark": "bar",
+    "width": {"step": 20},
 
     "encoding": {
       "x": {
         "field": "country",
         "type": "nominal",
-        "title": "country"
+        "title": "country",
+        "sort": "-y"
+
       },
       "y": {
-        "aggregate": "count",
+        "field": "Total Population",
+        "aggregate": "sum",
         "type": "quantitative",
-        "title": "number of people"
+        "title": "number of people",
+        "stack": null
       },
-      "color": {
-        "field": "Population",
-        "type": "nominal",
-        "scale": {"type": "linear"
-        }
-       }, 
+
       
        "tooltip": [
         {"field": "country", "type": "nominal", "title": "Country"},

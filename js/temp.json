@@ -15,3 +15,41 @@
   "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
 }
 },
+
+
+
+
+
+
+"transform": [
+  {"filter": "datum.['Active Personnel'] > 1"}
+],
+
+
+"color": {
+  "field": "Population",
+  "type": "nominal",
+  "scale": {"type": "linear"
+  }
+ }, 
+
+
+
+
+ "transform": [
+  {
+    "window": [{
+      "op": "rank",
+      "as": "rank"
+    }],
+    "sort":[{"field": "Total Population", "order": "descending"}]
+  },
+  {
+    "filter": "datum.rank <=30"
+  }
+],
+
+
+
+,
+        "sort": "-y"
