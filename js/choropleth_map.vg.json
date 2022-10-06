@@ -7,6 +7,7 @@
     "projection": {"type": "equalEarth"}, 
     
     "layer": [
+ 
 
 
     {
@@ -41,16 +42,19 @@
         {"field": "properties.GEOUNIT", "type": "nominal", "title": "Country"},
         {"field": "Armored Vehicles", "type": "quantitative"}
       ]}},
+
       {"data": {
         "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/ne_110m.json",
         "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
       },
       "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}},
       {"data": {
-        "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/ne_110m_ocean.json",
-        "format": {"type": "topojson", "feature": "oceans"}
+        "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/ne_110m_(1).json",
+        "format": {"type": "topojson", "feature": "ne_110m_ocean"}
       },
-      "mark": {"type": "geoshape", "fill": "skyblue"}}
+      "mark": {"type": "geoshape", "fill": "skyblue"}} 
+
+
 
 
     ] 
