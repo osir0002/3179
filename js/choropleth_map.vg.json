@@ -3,6 +3,20 @@
     "title": "Global Military Power",
     "width": 1000,
     "height": 500,
+
+    "params": [{
+      "name": "category",
+      "value": "Armored Vehicles",
+      "bind": {
+      "input": "select",
+      "options": [
+        "Attack Helicopters", "Defense Budget", "Navy Ships", "Paramilitary", "Submarines", "Tanks", "Total Aircraft Strength"
+      ],
+      "labels": ["Attack Helicopters", "Defense Budget", "Navy Ships", "Paramilitary", "Submarines", "Tanks", "Total Aircraft Strength"],
+      "name": "Category: "
+      }}],
+
+    
     
     "projection": {"type": "equalEarth"}, 
     
@@ -24,7 +38,7 @@
           "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/global%20firepower%202022%20wide.csv"
         },
         "key": "country", 
-        "fields": ["Armored Vehicles"]
+        "fields": ["Armored Vehicles", "Attack Helicopters"]
       }
     }],
 
@@ -32,7 +46,7 @@
 
     "encoding": {
       "color": {
-        "field": "Armored Vehicles",
+        "field": "Attack Helicopters",
         "type": "quantitative",
         "scale": {"type": "linear"
         }
