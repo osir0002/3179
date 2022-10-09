@@ -25,17 +25,17 @@
         
         "key": "country",
          
-        "fields": ["Active_Personnel", "Available_Manpower", "Fit-for-Service", "Paramilitary", "Reserve_Personnel", "Total_Population"]
+        "fields": ["Labor_Force", "Active_Personnel", "Available_Manpower", "Fit_for_Service", "Paramilitary", "Reserve_Personnel", "Total_Population"]
       }
     },
-    {"calculate": "100000*(datum.Fit-for-Service/datum.Total_Population)", "as": "Active Personnel per 100,000 population"}
+    {"calculate": "100000*(datum.Fit_for_Service/datum.Total_Population)", "as": "Fit-for-Service per 100,000 population"}
     ],
   
     "mark": {"type": "geoshape", "stroke": "lightgray"},
 
     "encoding": {
       "color": {
-        "field": "Active Personnel per 100,000 population",
+        "field": "Fit-for-Service per 100,000 population",
         "type": "quantitative",
         "scale": {"type": "linear"},
         "legend": {"titleLimit": 300}
