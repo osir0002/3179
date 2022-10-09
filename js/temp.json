@@ -72,3 +72,37 @@
           "labels": ["Melbourne CBD", "Geelong", "Bendigo", "Sale"],
           "name": "Map Centre: "
           }}        
+
+
+
+
+
+
+          ,
+    {"calculate": "100000*(datum.Available_Manpower/datum.Total_Population)", "as": "Available Manpower per 100,000 population"},
+    {"calculate": "100000*(datum.Fit-for-Service/datum.Total_Population)", "as": "Fit-for-Service per 100,000 population"},
+    {"calculate": "100000*(datum.Paramilitary/datum.Total_Population)", "as": "Paramilitary per 100,000 population"},
+    {"calculate": "100000*(datum.Reserve_Personnel/datum.Total_Population)", "as": "Reserve Personnel per 100,000 population"}
+
+
+
+
+
+
+
+    "params": [{
+      "name": "category",
+      "value": "datum.Active_Personnel",
+      "bind": {
+      "input": "select",
+      "options": [
+        "datum.Active_Personnel", "datum.Available_Manpower", "datum.Fit-for-Service", "datum.Paramilitary", "datum.Reserve_Personnel"
+      ],
+      "name": "Category: "
+      }}],
+
+
+
+
+
+    "field": "Active Personnel per 100,000 population",
