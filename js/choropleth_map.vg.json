@@ -43,7 +43,9 @@
       
        "tooltip": [
         {"field": "properties.GEOUNIT", "type": "nominal", "title": "Country"},
-        {"field": "Total_Population", "type": "quantitative"}
+        {"field": "Total_Population", "type": "quantitative"},
+        {"field": "Fit_for_Service", "type": "quantitative"}
+
       ]}},
 
       {"data": {

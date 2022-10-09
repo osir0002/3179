@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Military Personnel of Top Countries",
+    "title": "Top Defence Spending Nations",
     "width": 1000,
     "height": 500,
     
@@ -8,22 +8,12 @@
     "data": {
       "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/global%20firepower%202022%20wide.csv"
     },
+
     "transform": [
       {
-        "window": [{
-          "op": "rank",
-          "as": "rank"
-        }],
-        "sort":[{"field": "Total Population", "order": "descending"}]
-      },
-      {
-        "filter": "datum.rank <=30"
+        "filter": "datum.Defense_Budget > 40000000000"
       }
     ],
-    
-
-
-
 
 
     "mark": "bar",
@@ -33,25 +23,24 @@
       "x": {
         "field": "country",
         "type": "nominal",
-        "title": "country"
+        "title": "country",
+        "sort": "-y"
 
       },
       "y": {
-        "field": "Total Population",
+        "field": "Defense_Budget",
         "aggregate": "sum",
         "type": "quantitative",
-        "title": "number of people",
+        "title": "Defence Budget ($USD)",
         "stack": null
+
       },
 
       
        "tooltip": [
         {"field": "country", "type": "nominal", "title": "Country"},
-        {"field": "Active Personnel", "type": "quantitative"},
-        {"field": "Available Manpower", "type": "quantitative"},
-        {"field": "Fit-for-Service", "type": "quantitative"},
-        {"field": "Labor Force", "type": "quantitative"},
-        {"field": "Total Population", "type": "quantitative"}
+        {"field": "Defense_Budget", "type": "quantitative", "title": "Defence Budget"}
+
       ]}
 
 
