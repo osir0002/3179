@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Global Military Power",
+    "title": "Population that is Fit-for-Military-Service across the World",
     "width": 1000,
     "height": 500,
 
