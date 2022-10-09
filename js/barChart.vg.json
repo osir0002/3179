@@ -6,13 +6,13 @@
     
     "params": [{
       "name": "Min_Budget",
-      "value": 40000000000,
+      "value": 2000000000,
       "bind": {
       "input": "range",
       
-      "min": 5000000000,
-      "max": 100000000000,
-      "step": 5000000000,
+      "min": 2000000000,
+      "max": 40000000000,
+      "step": 2000000000,
       "name": "Min Annual Defence Budget: "
       }}],        
 
@@ -35,8 +35,7 @@
       "x": {
         "field": "country",
         "type": "nominal",
-        "title": "country",
-        "sort": "-y"
+        "title": "country"
 
       },
       "y": {
