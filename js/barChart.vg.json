@@ -4,6 +4,18 @@
     "width": 1000,
     "height": 500,
     
+    "params": [{
+      "name": "Min_Budget",
+      "value": 40000000000,
+      "bind": {
+      "input": "range",
+      
+      "min": 5000000000,
+      "max": 100000000000,
+      "step": 5000000000,
+      "name": "Min Annual Defence Budget: "
+      }}],        
+
 
     "data": {
       "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/global%20firepower%202022%20wide.csv"
@@ -11,7 +23,7 @@
 
     "transform": [
       {
-        "filter": "datum.Defense_Budget > 40000000000"
+        "filter": "datum.Defense_Budget > Min_Budget" 
       }
     ],
 
