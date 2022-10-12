@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Top Defence Spending Nations",
+    "title": "Defence Spending",
     "width": 1000,
     "height": 500,
     
