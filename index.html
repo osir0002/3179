@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Global Firepower</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+  integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
@@ -12,41 +23,63 @@
 
 </head>
 <body>
-<div>
-  <h1>Global Military Power</h1>
-</div> 
-<div id="choropleth_map"></div>
+  <div class = "page">
+   <!-- pure grid group -->
+   <div class="pure-g">
+    <div class="pure-u-1-1">
+      <h1>Global Firepower</h1>
+    </div>
+  </div>
+  <!-- end pure grid group -->
+    
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-20-24">
+        <div id="vis1" class = "vis-container"></div>
+    
 
-<script type="text/javascript">
+      </div>
+      <div class="pure-u-4-24">
+        <div class="description description-left">
+          <p>Victory in war ultimately comes down to available manpower that is Fit for Military Service, 
+            a crucial factor in the GFP (Global Firepower) ranking as it represents the portion of a given population that is (theoretically) available to assist in a war effort. 
+            This assumes able-bodied persons suitable for the fighting and material production involved in waging a long-running campaign. </p>
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+    
+    
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-6-24">
+        <div class="description description-left">
+          <p>The top annual defence spending budgets of the world, these being funds allotted by governments to cover
+            various aspects of a standing fighting force - namely procurement, maintenance / support, and pensions.</p>
+        </div>
+      </div>
+      <div class="pure-u-18-24">
+        <div id = "vis2" class = "vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
 
-  var spec2 = "js/choropleth_map.vg.json";
-  vegaEmbed('#choropleth_map', spec2).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
-<br><br><br><br><br><br><br><br>
-<div>
-  <p1>Victory in war ultimately comes down to available manpower that is Fit for Military Service, 
-    a crucial factor in the GFP ranking as it represents the portion of a given population that is (theoretically) available to assist in a war effort. 
-    This assumes able-bodied persons suitable for the fighting and material production involved in waging a long-running campaign. 
-  </p1>
-</div>
+  </div>
 
-<div id = "barChart"></div>
-<script type="text/javascript">
+  <script type="text/javascript">
+    var spec2 = "js/choropleth_map.vg.json";
+    vegaEmbed('#vis1', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
 
-  var spec2 = "js/barChart.vg.json";
-  vegaEmbed('#barChart', spec2).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
-<br><br><br><br><br><br><br><br>
-<div>
-  <p1>
-    The top annual defence spending budgets of the world, these being funds allotted by governments to cover
-    various aspects of a standing fighting force - namely procurement, maintenance / support, and pensions.
-  </p1>
-</div>
+    var spec2 = "js/Isotype1.vg.json";
+          vegaEmbed('#vis2', spec2).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+          }).catch(console.error);
+  </script>
+
+
+
 
 </body>
 </html>

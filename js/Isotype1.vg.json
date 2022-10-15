@@ -1,0 +1,34 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"view": {"stroke": ""}},
+    "width": 800,
+    "height": 500,
+
+       
+      "data": {
+        "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/global%20firepower%202022%20wide.csv"
+      },
+  
+      "transform": [
+        {
+          "filter": "datum.Tanks > 5000" 
+        },
+        {"calculate": "ceil(datum.Tanks/100)", "as": "col"}
+      ],
+
+    "mark": {"type": "image"},
+    "encoding": {
+      "url":  {"value": "https://img.icons8.com/stickers/100/000000/tank.png"},
+      "x": {"field": "col", "type": "quantitative", "axis": null},
+      "y": {"field": "country", "type": "nominal", "axis": null},
+
+      "opacity": {"value": 1},
+      "size": {"value": 200}, 
+      
+      "tooltip": [
+       {"field": "country", "type": "nominal", "title": "Country"},
+       {"field": "Tanks", "type": "quantitative", "title": "Tanks", "format": ","}
+     ]
+    }
+  }
+  

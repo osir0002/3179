@@ -51,7 +51,7 @@
       
        "tooltip": [
         {"field": "country", "type": "nominal", "title": "Country"},
-        {"field": "Defense_Budget", "type": "quantitative", "title": "Defence Budget"}
+        {"field": "Defense_Budget", "type": "quantitative", "title": "Defence Budget", "format": ","}
 
       ]}
 
