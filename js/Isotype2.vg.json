@@ -1,13 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "config": {"view": {"stroke": ""}},
-    "title": "Largest Tank Fleets",
+    "title": "Largest Fighter Jet Fleets",
     "width": "container",
     "height": 500,
 
        
       "data": {
-        "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/tanks_count.csv"
+        "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/planes_count.csv"
       },
   
     
@@ -15,12 +15,12 @@
     "mark": {"type": "image"},
     "encoding": {
       "url":  {"value": "https://img.icons8.com/stickers/100/000000/fighter-jet.png"},
-      "x": {"field": "TanksCount", "type": "quantitative", "axis": null},
+      "x": {"field": "PlanesCount", "type": "quantitative", "axis": null},
       "y": {"field": "country", "type": "nominal", "title": null},
       
       "tooltip": [
        {"field": "country", "type": "nominal", "title": "Country"},
-       {"field": "Tanks", "type": "quantitative", "title": "Tanks", "format": ","}
+       {"field": "Planes", "type": "quantitative", "title": "Fighter Jets", "format": ","}
      ]
     }
   }
