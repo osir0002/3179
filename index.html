@@ -56,8 +56,7 @@
         <div class="description description-left">
           <p> 
             One tank icon represents approximately 1000 tanks. Track-over-wheel designs are factored in from all branches of service (Army, Marines). 
-            Products currently under development or on 
-            order heading into the upcoming year are NOT taken into account.</p>
+            </p>
         </div>
       </div>
       <div class="pure-u-18-24">
@@ -70,8 +69,7 @@
     <div class="pure-g">
       <div class="pure-u-6-24">
         <div class="description description-left">
-          <p>One jet icon represents approximately 1000 fighter jets and similar attack aircrafts. These aircraft are specifically designed to attack ground targets by way of 
-            broader support for various air-to-ground munitions.</p>
+          <p>One jet icon represents approximately 1000 aircrafts. Fixed-wing and rotary-wing (helicopters) aircraft types are factored in from all branches of service (Air Force, Army Aviation, Navy, Marine). Aircraft types considered include fighters (multirole, interceptors), trainers (basic, advanced), transports (fixed-wing and helos), dedicated bombers and ground-attackers, special-missions platforms, etc.</p>
         </div>
       </div>
       <div class="pure-u-18-24">
@@ -84,7 +82,7 @@
       <div class="pure-g">
         <div class="pure-u-6-24">
           <div class="description description-left">
-            <p>One helicopter icon represents approximately 1000 helicopters. Rotorcraft forces are a critical component to any military power for their inherent flexibility and tactical usefulness. Helicopters can cover a myriad of over-battlefield roles including Search & Rescue, MEDEVAC, SpecialOps support, artillery-spotting, maritime patrol, and training.
+            <p>One helicopter icon represents approximately 300 helicopters. Rotorcraft forces are a critical component to any military power for their inherent flexibility and tactical usefulness. Helicopters can cover a myriad of over-battlefield roles including Search & Rescue, MEDEVAC, SpecialOps support, artillery-spotting, maritime patrol, and training.
             </p>
           </div>
         </div>
@@ -109,6 +107,11 @@
 
     var spec2 = "js/Isotype2.vg.json";
     vegaEmbed('#vis3', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec2 = "js/Isotype3.vg.json";
+    vegaEmbed('#vis4', spec2).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
