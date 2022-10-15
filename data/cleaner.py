@@ -32,7 +32,8 @@ TanksD = dict()
 
 
 for index, row in df.iterrows():
-    TanksD[row['country']] = row['Tanks']
+    if row['Tanks'] > 2830:
+        TanksD[row['country']] = row['Tanks']
 
 
 
