@@ -20,31 +20,31 @@ print("Files in %r: %s" % (cwd, files))
 
 
 
-df = pd.read_csv('data/global firepower 2022 wide.csv', usecols=['country', 'Navy_Ships'])
+df = pd.read_csv('data/global firepower 2022 wide.csv', usecols=['country', 'Helicopters'])
 
 print(df.head())
 
 country = df['country'].tolist()
-Navy_Ships = df['Navy_Ships'].tolist()
+Helicopters = df['Helicopters'].tolist()
 
 
-ShipsD = dict()
+HeliD = dict()
 
-intervals = 100
+intervals = 300
 
 
 for index, row in df.iterrows():
-    if  row['Navy_Ships'] > 270:
-        ShipsD[row['country']] = row['Navy_Ships']
+    if  row['Helicopters'] > 300:
+        HeliD[row['country']] = row['Helicopters']
 
 
 
 
 
-ShipsD2 = dict()
+HeliD2 = dict()
 
-for key in ShipsD:
-    ShipsD2[key] = range(intervals, ShipsD[key], intervals)
+for key in HeliD:
+    HeliD2[key] = range(intervals, HeliD[key], intervals)
 
 
 
@@ -56,17 +56,17 @@ for key in ShipsD:
 #print(bronze_count)
 
 big_dict = []
-for key1, key2 in zip(ShipsD, ShipsD2):
-    for val in ShipsD2[key2]:
+for key1, key2 in zip(HeliD, HeliD2):
+    for val in HeliD2[key2]:
         big_dict.append({
             "country": key2,
-            "ShipCount": val/intervals,
-            "Ships": ShipsD[key1]
+            "HeliCount": val/intervals,
+            "Helicopters": HeliD[key1]
     })
 
 
 
-fields = ['country', 'ShipCount', 'Ships']
+fields = ['country', 'HeliCount', 'Helicopters']
 with open('data/heli_count.csv', 'w', encoding="utf-8") as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fields)
     writer.writeheader()
