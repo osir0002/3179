@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "config": {"view": {"stroke": ""}},
     "title": "Largest Tank Fleets",
-    "width": "container",
+    "width": 800,
     "height": 500,
 
        
@@ -13,10 +13,14 @@
     
 
     "mark": {"type": "image"},
+    "width": {"step": 1000},
     "encoding": {
       "url":  {"value": "https://img.icons8.com/stickers/100/000000/tank.png"},
       "x": {"field": "Tanks", "type": "quantitative", "axis": null},
       "y": {"field": "country", "type": "nominal", "title": null},
+
+      "opacity": {"value": 1},
+      "size": {"value": 200}, 
       
       "tooltip": [
        {"field": "country", "type": "nominal", "title": "Country"},

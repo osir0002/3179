@@ -54,16 +54,17 @@ for key in TanksD:
 #print(bronze_count)
 
 big_dict = []
-for key in TanksD2:
-    for val in TanksD2[key]:
+for key1, key2 in zip(TanksD, TanksD2):
+    for val in TanksD2[key2]:
         big_dict.append({
-            "country": key,
-            "Tanks": val/1000,
+            "country": key2,
+            "TanksCount": val/1000,
+            "Tanks": TanksD[key1]
     })
 
 
 
-fields = ['country', 'Tanks']
+fields = ['country', 'TanksCount', 'Tanks']
 with open('data/tanks_count.csv', 'w', encoding="utf-8") as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fields)
     writer.writeheader()

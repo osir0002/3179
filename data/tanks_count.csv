@@ -1,95 +1,48 @@
-country,Tanks
-,
-China,1
-,
-China,2
-,
-China,3
-,
-China,4
-,
-China,5
-,
-Egypt,1
-,
-Egypt,2
-,
-Egypt,3
-,
-Egypt,4
-,
-India,1
-,
-India,2
-,
-India,3
-,
-India,4
-,
-Iran,1
-,
-Iran,2
-,
-Morocco,1
-,
-Morocco,2
-,
-Morocco,3
-,
-North Korea,1
-,
-North Korea,2
-,
-North Korea,3
-,
-North Korea,4
-,
-North Korea,5
-,
-Russia,1
-,
-Russia,2
-,
-Russia,3
-,
-Russia,4
-,
-Russia,5
-,
-Russia,6
-,
-Russia,7
-,
-Russia,8
-,
-Russia,9
-,
-Russia,10
-,
-Russia,11
-,
-Russia,12
-,
-Syria,1
-,
-Syria,2
-,
-Syria,3
-,
-Turkey,1
-,
-Turkey,2
-,
-Turkey,3
-,
-United States of America,1
-,
-United States of America,2
-,
-United States of America,3
-,
-United States of America,4
-,
-United States of America,5
-,
-United States of America,6
+country,TanksCount,Tanks
+China,1.0,5250
+China,2.0,5250
+China,3.0,5250
+China,4.0,5250
+China,5.0,5250
+Egypt,1.0,4394
+Egypt,2.0,4394
+Egypt,3.0,4394
+Egypt,4.0,4394
+India,1.0,4614
+India,2.0,4614
+India,3.0,4614
+India,4.0,4614
+Iran,1.0,2831
+Iran,2.0,2831
+Morocco,1.0,3335
+Morocco,2.0,3335
+Morocco,3.0,3335
+North Korea,1.0,5895
+North Korea,2.0,5895
+North Korea,3.0,5895
+North Korea,4.0,5895
+North Korea,5.0,5895
+Russia,1.0,12420
+Russia,2.0,12420
+Russia,3.0,12420
+Russia,4.0,12420
+Russia,5.0,12420
+Russia,6.0,12420
+Russia,7.0,12420
+Russia,8.0,12420
+Russia,9.0,12420
+Russia,10.0,12420
+Russia,11.0,12420
+Russia,12.0,12420
+Syria,1.0,3540
+Syria,2.0,3540
+Syria,3.0,3540
+Turkey,1.0,3022
+Turkey,2.0,3022
+Turkey,3.0,3022
+United States of America,1.0,6612
+United States of America,2.0,6612
+United States of America,3.0,6612
+United States of America,4.0,6612
+United States of America,5.0,6612
+United States of America,6.0,6612

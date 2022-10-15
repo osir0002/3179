@@ -1,7 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"view": {"stroke": ""}},
     "title": "Population that is Fit-for-Military-Service across the World",
-    "width": 750,
+    "width": "container",
     "height": 500,
 
 
