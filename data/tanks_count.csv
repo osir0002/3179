@@ -1,48 +1,95 @@
-country,TanksCount,Tanks
-China,1.0,5250
-China,2.0,5250
-China,3.0,5250
-China,4.0,5250
-China,5.0,5250
-Egypt,1.0,4394
-Egypt,2.0,4394
-Egypt,3.0,4394
-Egypt,4.0,4394
-India,1.0,4614
-India,2.0,4614
-India,3.0,4614
-India,4.0,4614
-Iran,1.0,2831
-Iran,2.0,2831
-Morocco,1.0,3335
-Morocco,2.0,3335
-Morocco,3.0,3335
-North Korea,1.0,5895
-North Korea,2.0,5895
-North Korea,3.0,5895
-North Korea,4.0,5895
-North Korea,5.0,5895
-Russia,1.0,12420
-Russia,2.0,12420
-Russia,3.0,12420
-Russia,4.0,12420
-Russia,5.0,12420
-Russia,6.0,12420
-Russia,7.0,12420
-Russia,8.0,12420
-Russia,9.0,12420
-Russia,10.0,12420
-Russia,11.0,12420
-Russia,12.0,12420
-Syria,1.0,3540
-Syria,2.0,3540
-Syria,3.0,3540
-Turkey,1.0,3022
-Turkey,2.0,3022
-Turkey,3.0,3022
-United States of America,1.0,6612
-United States of America,2.0,6612
-United States of America,3.0,6612
-United States of America,4.0,6612
-United States of America,5.0,6612
-United States of America,6.0,6612
+country,TanksCount,Tanks
+,,
+China,1,5250
+,,
+China,2,5250
+,,
+China,3,5250
+,,
+China,4,5250
+,,
+China,5,5250
+,,
+Egypt,1,4394
+,,
+Egypt,2,4394
+,,
+Egypt,3,4394
+,,
+Egypt,4,4394
+,,
+India,1,4614
+,,
+India,2,4614
+,,
+India,3,4614
+,,
+India,4,4614
+,,
+Iran,1,2831
+,,
+Iran,2,2831
+,,
+Morocco,1,3335
+,,
+Morocco,2,3335
+,,
+Morocco,3,3335
+,,
+North Korea,1,5895
+,,
+North Korea,2,5895
+,,
+North Korea,3,5895
+,,
+North Korea,4,5895
+,,
+North Korea,5,5895
+,,
+Russia,1,12420
+,,
+Russia,2,12420
+,,
+Russia,3,12420
+,,
+Russia,4,12420
+,,
+Russia,5,12420
+,,
+Russia,6,12420
+,,
+Russia,7,12420
+,,
+Russia,8,12420
+,,
+Russia,9,12420
+,,
+Russia,10,12420
+,,
+Russia,11,12420
+,,
+Russia,12,12420
+,,
+Syria,1,3540
+,,
+Syria,2,3540
+,,
+Syria,3,3540
+,,
+Turkey,1,3022
+,,
+Turkey,2,3022
+,,
+Turkey,3,3022
+,,
+United States of America,1,6612
+,,
+United States of America,2,6612
+,,
+United States of America,3,6612
+,,
+United States of America,4,6612
+,,
+United States of America,5,6612
+,,
+United States of America,6,6612

@@ -15,7 +15,7 @@
     "mark": {"type": "image"},
     "encoding": {
       "url":  {"value": "https://img.icons8.com/stickers/100/000000/tank.png"},
-      "x": {"field": "Tanks", "type": "quantitative", "axis": null},
+      "x": {"field": "TanksCount", "type": "quantitative", "axis": null},
       "y": {"field": "country", "type": "nominal", "title": null},
       
       "tooltip": [
