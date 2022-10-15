@@ -9,9 +9,15 @@
       "data": {
         "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/tanks_count.csv"
       },
+
+      "transform": [
+        {
+          "filter": "datum.Tanks > 1"
+        }
+      ],
   
     
-    "layer": [{"mark": {"type": "image"},
+    "layer": [{"mark": {"type": "image", "width": 100},
     "encoding": {
       "url":  {"value": "https://img.icons8.com/stickers/100/000000/tank.png"},
       "x": {"field": "TanksCount", "type": "quantitative", "axis": null},
