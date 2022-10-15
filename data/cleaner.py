@@ -34,7 +34,7 @@ intervals = 1000
 
 
 for index, row in df.iterrows():
-    if  row['Fighters/Interceptors'] > 3000:
+    if  row['Fighters/Interceptors'] > 1000:
         PlanesD[row['country']] = row['Fighters/Interceptors']
 
 
