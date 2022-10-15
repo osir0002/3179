@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "config": {"view": {"stroke": ""}},
-    "title": "Top 10 Countries by Helicopter Fleet Strength",
+    "title": "Top 10 Countries by Helicopter Fleet Strength (2022)",
     "width": "container",
     "height": 500,
 
