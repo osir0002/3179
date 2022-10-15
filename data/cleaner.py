@@ -20,69 +20,31 @@ print("Files in %r: %s" % (cwd, files))
 
 
 
-df = pd.read_csv('data/athlete_events.csv', usecols=['Team', 'Medal'])
+df = pd.read_csv('data/global firepower 2022 wide.csv', usecols=['country', 'Tanks'])
 
-print('yo')
 print(df.head())
 
-countries = df['Team'].tolist()
-medals = df['Medal'].tolist()
+country = df['country'].tolist()
+Tanks = df['Tanks'].tolist()
 
 
-gold_count = dict()
-silver_count = dict()
-bronze_count = dict()
-zero_count = dict()
+TanksD = dict()
+
 
 for index, row in df.iterrows():
-    if row['Medal'] == 'Gold':
-        if row['Team'] in gold_count:
-            gold_count[row['Team']] += 1
-        else:
-            gold_count[row['Team']] = 1
-
-    if row['Medal'] == 'Silver':
-        if row['Team'] in silver_count:
-            silver_count[row['Team']] += 1
-        else:
-            silver_count[row['Team']] = 1
-
-    if row['Medal'] == 'Bronze':
-        if row['Team'] in bronze_count:
-            bronze_count[row['Team']] += 1
-        else:
-            bronze_count[row['Team']] = 1
-
-    if row['Medal'] == 0 or row['Medal'] == '0':
-            zero_count[row['Team']] = 0
-
-
-medal_count = dict()
-
-for key in gold_count:
-    medal_count[key] = [gold_count[key], 0, 0, 0]
-
-
-for key in silver_count:
-        if key in medal_count:
-            medal_count[key][1] = silver_count[key]
-        else:
-            medal_count[key] = [0, silver_count[key], 0, 0]
-
-
-for key in bronze_count:
-        if key in medal_count:
-            medal_count[key][2] = bronze_count[key]
-        else:
-            medal_count[key] = [0, 0, bronze_count[key], 0]
+    TanksD[row['country']] = row['Tanks']
 
 
 
-for key in zero_count:
-        if key in medal_count:
-            medal_count[key][3] = zero_count[key]
-        else:
-            medal_count[key] = [0, 0, 0, 0]
+
+
+TanksD2 = dict()
+
+for key in TanksD:
+    TanksD2[key] = range(1000, TanksD[key], 1000)
+
+
+
 
 
 
@@ -91,20 +53,17 @@ for key in zero_count:
 #print(bronze_count)
 
 big_dict = []
-for key in medal_count:
-    big_dict.append({
-        "Country": key,
-        "Gold_Count": medal_count[key][0],
-        "Silver_Count": medal_count[key][1],
-        "Bronze_Count": medal_count[key][2],
-        "Zero_Count": medal_count[key][3]
-
+for key in TanksD2:
+    for val in TanksD2[key]:
+        big_dict.append({
+            "country": key,
+            "Tanks": val/1000,
     })
 
 
 
-fields = ['Country', 'Gold_Count', 'Silver_Count', 'Bronze_Count', 'Zero_Count']
-with open('data/country_medal_count.csv', 'w', encoding="utf-8") as csvfile:
+fields = ['country', 'Tanks']
+with open('data/tanks_count.csv', 'w', encoding="utf-8") as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fields)
     writer.writeheader()
     writer.writerows(big_dict)
