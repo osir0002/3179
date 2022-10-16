@@ -30,7 +30,7 @@ Defense_Budget = df['Defense_Budget'].tolist()
 
 MoneyD = dict()
 
-intervals = 40000000
+intervals = 40000000000
 
 
 for index, row in df.iterrows():

@@ -32,10 +32,8 @@
 
       },
       "y": {
-        "field": "Budget",
-        "aggregate": "sum",
+        "field": "MoneyCount",
         "type": "quantitative",
-        "title": "Defence Budget ($USD)",
         "axis": null
 
       },
