@@ -35,7 +35,6 @@
         "field": "MoneyCount",
         "type": "quantitative",
         "axis": null
-
       },
       
        "tooltip": [

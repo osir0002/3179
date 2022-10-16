@@ -20,31 +20,99 @@ print("Files in %r: %s" % (cwd, files))
 
 
 
-df = pd.read_csv('data/global firepower 2022 wide.csv', usecols=['country', 'Defense_Budget'])
+df = pd.read_csv('data/Nuclear_warheads 1945-2022 per country.csv')#, usecols=['country', 'Defense_Budget'])
 
 print(df.head())
 
-country = df['country'].tolist()
-Defense_Budget = df['Defense_Budget'].tolist()
+Year = df['Year'].tolist()
+United_States = df['United States'].tolist()
+Russia = df['Russia'].tolist()
+United_Kingdom = df['United Kingdom'].tolist()
+France = df['France'].tolist()
+China = df['China'].tolist()
+Israel = df['Israel'].tolist()
+India = df['India'].tolist()
+Pakistan = df['Pakistan'].tolist()
+North_Korea = df['North Korea'].tolist()
 
 
-MoneyD = dict()
+NukesD = dict()
+big_dict = []
 
-intervals = 40000000000
+
+#intervals = 40000000000
 
 
 for index, row in df.iterrows():
-    if  int(row['Defense_Budget']) > 42000000000:
-        MoneyD[row['country']] = int(row['Defense_Budget'])
+    #if  int(row['Defense_Budget']) > 42000000000:
+    #    NukesD[row['country']] = int(row['Defense_Budget'])
+
+    big_dict.append({
+        "Country": "United States of America",
+        "Year": row["Year"],
+        "Nukes": row["United States"]
+    })
+
+    big_dict.append({
+        "Country": "Russia",
+        "Year": row["Year"],
+        "Nukes": row["Russia"]
+    })
+
+    big_dict.append({
+        "Country": "United Kingdom",
+        "Year": row["Year"],
+        "Nukes": row["United Kingdom"]
+    })
+
+    big_dict.append({
+        "Country": "France",
+        "Year": row["Year"],
+        "Nukes": row["France"]
+    })
+
+    big_dict.append({
+        "Country": "China",
+        "Year": row["Year"],
+        "Nukes": row["China"]
+    })
+
+    big_dict.append({
+        "Country": "Israel",
+        "Year": row["Year"],
+        "Nukes": row["Israel"]
+    })
+
+    big_dict.append({
+        "Country": "India",
+        "Year": row["Year"],
+        "Nukes": row["India"]
+    })
+
+    big_dict.append({
+        "Country": "Pakistan",
+        "Year": row["Year"],
+        "Nukes": row["Pakistan"]
+    })
+
+    big_dict.append({
+        "Country": "North Korea",
+        "Year": row["Year"],
+        "Nukes": row["North Korea"]
+    })
+
+    
+    
 
 
 
 
 
-MoneyD2 = dict()
 
-for key in MoneyD:
-    MoneyD2[key] = range(intervals, MoneyD[key], intervals)
+#NukesD2 = dict()
+
+#for key in NukesD:
+#    NukesD2[key] = range(intervals, NukesD[key], intervals)
 
 
 
@@ -55,19 +123,20 @@ for key in MoneyD:
 #print(silver_count)
 #print(bronze_count)
 
-big_dict = []
-for key1, key2 in zip(MoneyD, MoneyD2):
-    for val in MoneyD2[key2]:
-        big_dict.append({
-            "country": key2,
-            "MoneyCount": val/intervals,
-            "Budget": MoneyD[key1]
-    })
+# for key1, key2 in zip(NukesD, NukesD2):
+#     for val in NukesD2[key2]:
+#         big_dict.append({
+#             "country": key2,
+#             "MoneyCount": val/intervals,
+#             "Budget": NukesD[key1]
+#     })
 
 
 
-fields = ['country', 'MoneyCount', 'Budget']
-with open('data/budget_count.csv', 'w', encoding="utf-8") as csvfile:
+
+
+fields = ['Country', 'Year', 'Nukes']
+with open('data/nukes_data.csv', 'w', encoding="utf-8") as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fields)
     writer.writeheader()
     writer.writerows(big_dict)

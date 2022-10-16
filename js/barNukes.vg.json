@@ -1,0 +1,34 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"view": {"stroke": ""}},
+    "title": "Top 10 Countries by Nuclear Warhead Count (2022)",
+    "width": "container",
+    "height": 500,
+
+       
+      "data": {
+        "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/planes_count.csv"
+      },
+
+      "transform": [
+        {
+          "filter": "datum.Planes > 1"
+        }
+      ],
+  
+    
+
+    "mark": {"type": "bar"},
+    "encoding": {
+      "x": {"field": "country", "type": "nominal", "title": null, "sort": ["United States of America", "Russia", "China", "India", "South Korea", "Japan", "Pakistan", "Egypt", "Turkey", "France"]
+    },
+
+      "y": {"field": "PlanesCount", "type": "quantitative", "axis": null},
+      
+      "tooltip": [
+       {"field": "country", "type": "nominal", "title": "Country"},
+       {"field": "Planes", "type": "quantitative", "title": "Military Aircrafts", "format": ","}
+     ]
+    }
+  }
+  

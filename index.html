@@ -48,6 +48,8 @@
       </div>
     </div>
     <!-- end pure grid group -->
+
+
     
     
     <!-- pure grid group -->
@@ -116,29 +118,31 @@
       </div>
       <!-- end pure grid group -->
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-20-24">
-        <div id="vis6" class = "vis-container"></div>
-    
+        <!-- pure grid group -->
+        <div class="pure-g">
+          
+          <div class="pure-u-20-24">
+            <div id = "vis6" class = "vis-container"></div>
+          </div>
 
-      </div>
-      <div class="pure-u-4-24">
-        <div class="description description-left">
-          <p>Click on a country to highlight it. </p>
+          <div class="pure-u-4-24">
+            <div class="description description-left">
+              <p> One cash icon represents approximately 40 Billion USD. 
+                Defence spending relates to funds allotted by governments to cover various aspects of a standing 
+                fighting force - namely procurement, maintenance / support, and pensions.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <!-- end pure grid group -->
+        <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-4-24">
         <div class="description description-left">
-          <p> One cash icon represents approximately 40 Billion USD. 
-            Defence spending relates to funds allotted by governments to cover various aspects of a standing 
-            fighting force - namely procurement, maintenance / support, and pensions.
-          </p>
+          <p> 
+            Nukes
+            </p>
         </div>
       </div>
       <div class="pure-u-20-24">
@@ -146,6 +150,26 @@
       </div>
     </div>
     <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+   
+      <div class="pure-u-20-24">
+        <div id="vis8" class = "vis-container"></div>
+      </div>
+
+      <div class="pure-u-4-24">
+        <div class="description description-left">
+          <p>Click on a country to highlight it. </p>
+        </div>
+      </div>
+
+
+
+    </div>
+    <!-- end pure grid group -->
+
+
 
   </div>
 
@@ -155,34 +179,42 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    var spec2 = "js/Isotype1.vg.json";
+    var spec2 = "js/isotypeTanks.vg.json";
           vegaEmbed('#vis2', spec2).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
           }).catch(console.error);
 
-    var spec2 = "js/Isotype2.vg.json";
+    var spec2 = "js/isotypeAircrafts.vg.json";
     vegaEmbed('#vis3', spec2).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    var spec2 = "js/Isotype3.vg.json";
+    var spec2 = "js/isotypeHelicopters.vg.json";
     vegaEmbed('#vis4', spec2).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
 
-    var spec2 = "js/Isotype4.vg.json";
+    var spec2 = "js/isotypeShips.vg.json";
     vegaEmbed('#vis5', spec2).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    var spec2 = "js/bumpChart.vg.json";
+
+    var spec2 = "js/isotypeBudget.vg.json";
     vegaEmbed('#vis6', spec2).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    var spec2 = "js/barChart.vg.json";
+
+    var spec2 = "js/barNukes.vg.json";
     vegaEmbed('#vis7', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+
+    var spec2 = "js/bumpChart.vg.json";
+    vegaEmbed('#vis8', spec2).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
     </script>
