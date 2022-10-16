@@ -20,10 +20,12 @@ print("Files in %r: %s" % (cwd, files))
 
 
 
-df = pd.read_csv('data/global firepower 2022 wide.csv', usecols=['country', 'Helicopters'])
+df = pd.read_csv('data/rankings.csv')#, usecols=['Country', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ])
 
 print(df.head())
 
+
+"""
 country = df['country'].tolist()
 Helicopters = df['Helicopters'].tolist()
 
@@ -73,3 +75,4 @@ with open('data/heli_count.csv', 'w', encoding="utf-8") as csvfile:
     writer.writerows(big_dict)
     
 print('Done')
+"""

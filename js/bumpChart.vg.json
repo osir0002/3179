@@ -1,0 +1,20 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"view": {"stroke": ""}},
+    "title": "Military Powers ranked according to Global Firepower (2007 - 2022)",
+    "width": "container",
+    "height": 400,
+
+    "data": {
+        "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/rankings2.csv"
+      }, 
+
+    "mark": {"type": "line", "point": true},
+    "encoding": {
+      "x": {"field": "year", "type": "ordinal"},
+      "y": {"field": "rank", "type": "ordinal"},
+      "order": {"field": "year", "type": "ordinal"}
+    }
+
+
+  }

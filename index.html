@@ -116,6 +116,21 @@
       </div>
       <!-- end pure grid group -->
 
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-20-24">
+        <div id="vis6" class = "vis-container"></div>
+    
+
+      </div>
+      <div class="pure-u-4-24">
+        <div class="description description-left">
+          <p>Hello </p>
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
   </div>
 
   <script type="text/javascript">
@@ -142,6 +157,11 @@
 
     var spec2 = "js/Isotype4.vg.json";
     vegaEmbed('#vis5', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec2 = "js/bumpChart.vg.json";
+    vegaEmbed('#vis6', spec2).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
     </script>
