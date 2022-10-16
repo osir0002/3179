@@ -50,13 +50,13 @@ for index, row in df.iterrows():
     big_dict.append({
         "Country": "United States of America",
         "Year": row["Year"],
-        "Nukes": row["United States"]
+        "Nukes": row["United States"].replace(",", "")
     })
 
     big_dict.append({
         "Country": "Russia",
         "Year": row["Year"],
-        "Nukes": row["Russia"]
+        "Nukes": row["Russia"].replace(",", "")
     })
 
     big_dict.append({
