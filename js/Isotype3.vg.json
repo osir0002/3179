@@ -17,7 +17,7 @@
       ],
     
 
-    "mark": {"type": "image", "width": 30},
+    "mark": {"type": "image", "width": 40},
     "encoding": {
       "url":  {"value": "https://img.icons8.com/stickers/100/000000/military-helicopter.png"},
       "x": {"field": "HeliCount", "type": "quantitative", "axis": null},

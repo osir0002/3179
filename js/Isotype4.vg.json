@@ -17,7 +17,7 @@
       ],
     
 
-    "mark": {"type": "image", "width": 600},
+    "mark": {"type": "image", "width": 500}, 
     "encoding": {
       "url":  {"value": "https://img.icons8.com/stickers/100/000000/battleship.png"},
       "x": {"field": "ShipCount", "type": "quantitative", "axis": null},
