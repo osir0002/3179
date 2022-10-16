@@ -3,19 +3,19 @@
     "config": {"view": {"stroke": ""}},
     "title": "Military Powers ranked according to Global Firepower (2007 - 2022)",
     "width": "container",
-    "height": 400,
+    "height": 1000,
 
     "data": {
         "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/rankings2.csv"
       }, 
 
-      "mark": {"type": "image", "width": 50, "height": 50, "line": true},
+      "mark": {"type": "image", "width": 40, "height": 40, "line": true},
       "encoding": {
 
         "x": {"field": "Year", "type": "ordinal", "title": null, "axis": {"orient": "top"}},
         "y": {"field": "Rank", "type": "ordinal", "title": null},
         "order": {"field": "Rank", "type": "ordinal"},
-        "url" : {"field": "img", "type": "nominal"},
+        "url" : {"field": "Img", "type": "nominal"},
         
 
 
