@@ -15,18 +15,30 @@
         }
       ],
 
-      "mark": {"type": "image", "width": 50, "height": 50},
+      "params": [{
+        "name": "highlight",
+        "select": {"type": "point", "fields": ["Country"]}
+        
+
+        }],  
+
+
+      "mark": {"type": "image", "width": 50, "height": 50, "line": true},
       "encoding": {
         "x": {"field": "Year", "type": "ordinal", "title": null, "axis": {"orient": "top", "labelAngle": 0}, "sort": "ascending"},
-        "y": {"field": "Rank", "type": "quantitative", "title": null, "sort": "descending"},
+        "y": {"field": "Rank", "type": "ordinal", "title": null, "sort": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]},
         "url" : {"field": "Img", "type": "nominal"},
         
         "tooltip": [
             {"field": "Country", "type": "nominal", "title": "Country"},
             {"field": "Rank", "type": "ordinal", "title": "Rank"},
             {"field": "Year", "type": "ordinal", "title": "Year"}
-          ]
-              
+          ],
+
+        "opacity": {
+            "condition": {"param": "highlight",  "value": 1},
+            "value": 0.3
+          }   
       }
 
   }

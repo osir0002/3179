@@ -20,33 +20,31 @@ print("Files in %r: %s" % (cwd, files))
 
 
 
-df = pd.read_csv('data/rankings.csv')#, usecols=['Country', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ])
+df = pd.read_csv('data/global firepower 2022 wide.csv', usecols=['country', 'Defense_Budget'])
 
 print(df.head())
 
-
-"""
 country = df['country'].tolist()
-Helicopters = df['Helicopters'].tolist()
+Defense_Budget = df['Defense_Budget'].tolist()
 
 
-HeliD = dict()
+MoneyD = dict()
 
-intervals = 300
+intervals = 40000000
 
 
 for index, row in df.iterrows():
-    if  row['Helicopters'] > 300:
-        HeliD[row['country']] = row['Helicopters']
+    if  int(row['Defense_Budget']) > 42000000000:
+        MoneyD[row['country']] = int(row['Defense_Budget'])
 
 
 
 
 
-HeliD2 = dict()
+MoneyD2 = dict()
 
-for key in HeliD:
-    HeliD2[key] = range(intervals, HeliD[key], intervals)
+for key in MoneyD:
+    MoneyD2[key] = range(intervals, MoneyD[key], intervals)
 
 
 
@@ -58,21 +56,20 @@ for key in HeliD:
 #print(bronze_count)
 
 big_dict = []
-for key1, key2 in zip(HeliD, HeliD2):
-    for val in HeliD2[key2]:
+for key1, key2 in zip(MoneyD, MoneyD2):
+    for val in MoneyD2[key2]:
         big_dict.append({
             "country": key2,
-            "HeliCount": val/intervals,
-            "Helicopters": HeliD[key1]
+            "MoneyCount": val/intervals,
+            "Budget": MoneyD[key1]
     })
 
 
 
-fields = ['country', 'HeliCount', 'Helicopters']
-with open('data/heli_count.csv', 'w', encoding="utf-8") as csvfile:
+fields = ['country', 'MoneyCount', 'Budget']
+with open('data/budget_count.csv', 'w', encoding="utf-8") as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fields)
     writer.writeheader()
     writer.writerows(big_dict)
     
 print('Done')
-"""

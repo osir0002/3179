@@ -1,57 +1,48 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Defence Spending",
-    "width": 1000,
+    "config": {"view": {"stroke": ""}},
+    "title": "Top 10 Countries by Defence Spending (2022)",
+    "width": "container",
     "height": 500,
     
-    "params": [{
-      "name": "Min_Budget",
-      "value": 2000000000,
-      "bind": {
-      "input": "range",
-      
-      "min": 2000000000,
-      "max": 40000000000,
-      "step": 2000000000,
-      "name": "Min Annual Defence Budget: "
-      }}],        
+  
 
 
     "data": {
-      "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/global%20firepower%202022%20wide.csv"
+      "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/budget_count.csv"
     },
 
     "transform": [
       {
-        "filter": "datum.Defense_Budget > Min_Budget" 
+        "filter": "datum.Budget > 1" 
       }
     ],
 
 
-    "mark": "bar",
-    "width": {"step": 20},
+    "mark": {"type": "image", "width": 50, "height": 50},
 
     "encoding": {
+      "url": {"value": "https://img.icons8.com/stickers/100/000000/money.png"},
       "x": {
         "field": "country",
         "type": "nominal",
-        "title": "country",
+        "title": null,
+        "axis": {"labelAngle": 0},
         "sort": "-y"
 
       },
       "y": {
-        "field": "Defense_Budget",
+        "field": "Budget",
         "aggregate": "sum",
         "type": "quantitative",
         "title": "Defence Budget ($USD)",
-        "stack": null
+        "axis": null
 
       },
-
       
        "tooltip": [
         {"field": "country", "type": "nominal", "title": "Country"},
-        {"field": "Defense_Budget", "type": "quantitative", "title": "Defence Budget", "format": ","}
+        {"field": "Budget", "type": "quantitative", "title": "Defence Budget", "format": ","}
 
       ]}
 
