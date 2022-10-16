@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "config": {"view": {"stroke": ""}},
-    "title": "Top 10 Countries by Tank Fleet Strength (2022)",
+    "title": {"text": "Top 10 Countries by Tank Fleet Strength (2022)", "subtitle": "*One tank icon represents approximately 1000 tanks"},
     "width": "container",
     "height": 500,
 

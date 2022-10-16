@@ -30,7 +30,8 @@
         }
       ],
   
-    "mark": {"type": "bar"},
+    "layer": [    
+    {"mark": {"type": "bar", "color": "orange"},
     "encoding": {
       "x": {"field": "Country", "type": "nominal", "axis": {"labelAngle": 0}, "title": null},
 
@@ -40,6 +41,19 @@
        {"field": "Country", "type": "nominal", "title": "Country"},
        {"field": "Nukes", "type": "quantitative", "title": "Nukes", "format": ","}
      ]
-    }
+    }},
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom"
+      },
+      "encoding": {
+        "text": {"field": "Nukes", "type": "quantitative", "format": ","},
+        "x": {"field": "Country", "type": "nominal", "axis": {"labelAngle": 0}, "title": null},
+
+        "y": {"field": "Nukes", "type": "quantitative", "title": null}
+      }}]
+
   }
   

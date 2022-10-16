@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "config": {"view": {"stroke": ""}},
-    "title": "Top 10 Countries by Navy Fleet Strength (2022)",
+    "title": {"text": "Top 10 Countries by Navy Fleet Strength (2022)", "subtitle": "*One ship icon represents approximately 100 ships"},
     "width": "container",
     "height": 500,
 
