@@ -22,7 +22,9 @@
     "encoding": {
       "url":  {"value": "https://img.icons8.com/stickers/100/000000/fighter-jet.png"},
       "x": {"field": "PlanesCount", "type": "quantitative", "axis": null},
-      "y": {"field": "country", "type": "nominal", "title": null},
+      "y": {"field": "country", "type": "nominal", "title": null,
+      "sort": ["United States of America", "Russia", "China", "India", "South Korea", "Japan", "Pakistan", "Egypt", "Turkey", "France"]
+},
       
       "tooltip": [
        {"field": "country", "type": "nominal", "title": "Country"},

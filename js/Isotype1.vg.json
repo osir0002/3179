@@ -17,18 +17,20 @@
       ],
   
     
-    "layer": [{"mark": {"type": "image", "width": 100},
+    "mark": {"type": "image", "width": 100},
     "encoding": {
       "url":  {"value": "https://img.icons8.com/stickers/100/000000/tank.png"},
       "x": {"field": "TanksCount", "type": "quantitative", "axis": null},
-      "y": {"field": "country", "type": "nominal", "title": null},
+      "y": {"field": "country", "type": "nominal", "title": null,
+      "sort": ["Russia", "United States of America", "North Korea", "China", "India", "Egypt", "Syria", "Morocco", "Turkey", "Iran"]
+    },
       
       "tooltip": [
        {"field": "country", "type": "nominal", "title": "Country"},
        {"field": "Tanks", "type": "quantitative", "title": "Tanks", "format": ","}
      ]
-    }}
-    ]
+    }
+    
     
   }
   

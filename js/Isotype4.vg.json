@@ -21,7 +21,10 @@
     "encoding": {
       "url":  {"value": "https://img.icons8.com/stickers/100/000000/battleship.png"},
       "x": {"field": "ShipCount", "type": "quantitative", "axis": null},
-      "y": {"field": "country", "type": "nominal", "title": null},
+      "y": {"field": "country", "type": "nominal", "title": null,
+      "sort": ["China", "Russia", "United States of America", "Colombia", "North Korea", "Sweden", "Indonesia", "India", "Thailand", "Sri Lanka"]
+
+    },
       
       "tooltip": [
        {"field": "country", "type": "nominal", "title": "Country"},

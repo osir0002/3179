@@ -28,7 +28,7 @@
         "type": "nominal",
         "title": null,
         "axis": {"labelAngle": 0},
-        "sort": "-y"
+        "sort": ["United States of America", "China", "Russia", "United Kingdom", "Germany", "India", "Japan", "South Korea", "Saudi Arabia", "Australia"]
 
       },
       "y": {

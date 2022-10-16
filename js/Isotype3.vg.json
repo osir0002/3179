@@ -21,7 +21,9 @@
     "encoding": {
       "url":  {"value": "https://img.icons8.com/stickers/100/000000/military-helicopter.png"},
       "x": {"field": "HeliCount", "type": "quantitative", "axis": null},
-      "y": {"field": "country", "type": "nominal", "title": null},
+      "y": {"field": "country", "type": "nominal", "title": null,
+      "sort": ["United States of America", "Russia", "China", "India", "South Korea", "Japan", "Turkey", "France", "Italy", "Egypt"]
+    },
       
       "tooltip": [
        {"field": "country", "type": "nominal", "title": "Country"},
