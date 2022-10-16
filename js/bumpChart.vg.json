@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "config": {"view": {"stroke": ""}},
-    "title": {"text": "Military Powers ranked according to Global Firepower (2007 - 2022)", "subtitle": "*Click on a country to highlight it"},
+    "title": {"text": "Military Powers ranked according to Firepower (2007 - 2022)", "subtitle": "*Click on a country to highlight it"},
     "width": "container",
     "height": 500,
 
