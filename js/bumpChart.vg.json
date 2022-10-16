@@ -5,26 +5,25 @@
     "width": "container",
     "height": 500,
 
+
+
     "data": {
         "url": "https://raw.githubusercontent.com/osir0002/3179/main/data/rankings2.csv"
       }, 
 
-      "transform": [
-        {
-          "filter": "datum.Rank <= 10"
-        }
-      ],
+
+
 
 
  
 
       "layer": [
-        
       {
+         
         "mark": {"type": "line", "interpolate": "monotone"},
       "encoding": {
         "x": {"field": "Year", "type": "ordinal", "title": null, "axis": {"orient": "top", "labelAngle": 0}, "sort": "ascending"},
-        "y": {"field": "Rank", "type": "ordinal", "title": null, "sort": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]},
+        "y": {"field": "Rank", "type": "quantitative", "title": null, "axis": {"grid": false}, "sort": "descending"},
         "order": {"field": "Country", "type": "nominal"},
         "color": {"field": "Country", "type": "nominal", "legend": null},
 
@@ -45,7 +44,7 @@
           "mark": {"type": "image", "width": 40, "height": 40},
       "encoding": {
         "x": {"field": "Year", "type": "ordinal", "title": null,  "axis": {"orient": "top", "labelAngle": 0}, "sort": "ascending"},
-        "y": {"field": "Rank", "type": "ordinal", "title": null, "sort": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]},
+        "y": {"field": "Rank", "type": "quantitative", "title": null, "axis": {"grid": false}, "sort": "descending"},
         "url" : {"field": "Img", "type": "nominal"},
         
         "tooltip": [
