@@ -4,9 +4,6 @@
     "title": "Population that is Fit-for-Military-Service across the World (2022)",
     "width": "container",
     "height": 400,
-
-
-
     "projection": {"type": "equalEarth"}, 
     
     "layer": [

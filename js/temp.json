@@ -97,7 +97,7 @@
       "bind": {
       "input": "select",
       "options": [
-        "datum.Active_Personnel", "datum.Available_Manpower", "datum.Fit-for-Service", "datum.Paramilitary", "datum.Reserve_Personnel"
+        "Active_Personnel", "Available_Manpower", "Fit-for-Service", "Paramilitary", "Reserve_Personnel"
       ],
       "name": "Category: "
       }}],
